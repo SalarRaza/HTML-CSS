@@ -16,5 +16,6 @@ ul li{
    list-style-type: none;
    color: whitesmoke;
    display:inline-block;
+   padding: 6px 25px;
 
 }
