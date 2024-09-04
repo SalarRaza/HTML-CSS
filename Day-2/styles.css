@@ -4,7 +4,7 @@ body{
 header{
     text-align: center;
 }
-h1 {
+h1,h2 {
     color: #0153ea
 }
 nav{
@@ -34,10 +34,14 @@ nav ul li a {
     text-decoration: none;
     padding: 10px 20px;
     display: block;
+    
 }
 
 nav ul li a:hover {
-    background-color: black;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50px; /* or any other shape */
+    transition: background-color 0.3s, color 0.3s;
 }
 
 section {
@@ -50,10 +54,43 @@ section {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
-
-section h2 {
-    color: #007bff;
+/* Styling for the Curriculum section */
+.curriculum {
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Assuming you have 6 grid items */
+    gap: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure it spans the full width */
+}
+
+.grid-item {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.grid-item h3 {
+    color: #0153ea;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.grid-item p {
+    font-size: 0.9em;
+    color: #333;
+}
+
+
 
 section img {
     max-width: 100%;

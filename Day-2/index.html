@@ -1,64 +1,83 @@
 <!DOCTYPE html>
-
 <html>
     <head>
-        <title>MSIT - Info Pagef</title>
-        <link rel="stylesheet" href="styles.css">
+        <title>MSIT - Info Page</title> <!-- Page title displayed in the browser tab -->
+        <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS stylesheet -->
     </head>
     <body>
         <header>
-             <img src="msitlogo.png">
-             <h1>Master of Science in Information Technology</h1>
+            <img src="msitlogo.png" alt="MSIT Logo"> <!-- Logo image for the header -->
+            <h1>Master of Science in Information Technology</h1> <!-- Main heading for the page -->
         </header>
+        
         <nav>
-            <ul class="ul1">
-                <li class="li1">Overview</li>
-                <li class="li1">Curriculum</li>
-                <li class="li1">Admission Requirements</li>
-                <li class="li1">Contact us</li>
-            </ul class="ul1">
+            <ul class="ul1"> <!-- Navigation menu list -->
+                <li class="li1"><a href="#overview">Overview</a></li> <!-- Link to the Overview section -->
+                <li class="li1"><a href="#curriculum">Curriculum</a></li> <!-- Link to the Curriculum section -->
+                <li class="li1"><a href="#admission">Admission Requirements</a></li> <!-- Link to the Admission Requirements section -->
+                <li class="li1"><a href="#contact">Contact us</a></li> <!-- Link to the Contact Us section -->
+            </ul>
         </nav>
+
+        <!-- Sections of the page -->
+        <section class="program-overview" id="overview">
+            <h2>Program Overview</h2> <!-- Subheading for the Program Overview section -->
+            <p>The MSIT program is designed to equip students with the skills and knowledge needed to excel in the field of information technology. Our curriculum is tailored to meet the needs of both beginners and experienced professionals.</p> <!-- Description of the program -->
+
+            <img src="image.png" alt="description" style="display: block; margin: auto;"> <!-- Image related to the program overview -->
+        </section>
+
+        <section class="curriculum" id="curriculum">
+            <h2>Curriculum</h2> <!-- Subheading for the Curriculum section -->
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3>Data Structures and Algorithms</h3>
+                    <p>Learn the foundational concepts of data structures and algorithms to build efficient systems.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Database Management Systems</h3>
+                    <p>Understand how to design and manage databases using SQL and NoSQL technologies.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Web Development</h3>
+                    <p>Explore front-end and back-end technologies to build dynamic, full-stack web applications.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Cloud Computing</h3>
+                    <p>Discover cloud platforms, virtualization, and containerization to deploy scalable applications.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Cybersecurity</h3>
+                    <p>Learn the essentials of protecting systems and data from malicious attacks and breaches.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Machine Learning</h3>
+                    <p>Gain knowledge in machine learning algorithms and how to apply them to real-world problems.</p>
+                </div>
+            </div>
+        </section>
+        
+
+        <section class="admission-requirements" id="admission">
+            <h2>Admission Requirements</h2> <!-- Subheading for the Admission Requirements section -->
+            <ul>
+                <li>A bachelor's degree in a related field</li> <!-- Admission requirement -->
+                <li>Official transcripts</li> <!-- Admission requirement -->
+                <li>Resume/CV</li> <!-- Admission requirement -->
+                <li>Statement of purpose</li> <!-- Admission requirement -->
+                <li>Two letters of recommendation</li> <!-- Admission requirement -->
+            </ul>
+        </section>
+
+        <section class="contact-us" id="contact">
+            <h2>Contact Us</h2> <!-- Subheading for the Contact Us section -->
+            <p>If you have any questions, feel free to reach out to us:</p> <!-- Contact instructions -->
+            <p>Email: <a href="mailto:msit@university.edu">msit@university.edu</a><br> <!-- Email link -->
+            Phone: (123) 456-7890</p> <!-- Phone number -->
+        </section>
+
+        <footer>
+            <p>&copy; 2024 University Name. All rights reserved.</p> <!-- Footer text with copyright notice -->
+        </footer>
     </body>
-</html>
-
-<section class="program-overview">
-    <h2>Program Overview</h2>
-    <p>The MSIT program is designed to equip students with the skills and knowledge needed to excel in the field of information technology. Our curriculum is tailored to meet the needs of both beginners and experienced professionals.</p>
-    
-    <img src="image.png" alt="Description" style="display: block; margin: auto;">
-</section>
-
-<section class="curriculum">
-    <h2>Curriculum</h2>
-    <ul>
-        <li>Data Structures and Algorithms</li>
-        <li>Database Management Systems</li>
-        <li>Web Development</li>
-        <li>Cloud Computing</li>
-        <li>Cybersecurity</li>
-    </ul>
-</section>
-
-<section class="admission-requirements">
-    <h2>Admission Requirements</h2>
-    <ul>
-        <li>A bachelor's degree in a related field</li>
-        <li>Official transcripts</li>
-        <li>Resume/CV</li>
-        <li>Statement of purpose</li>
-        <li>Two letters of recommendation</li>
-    </ul>
-</section>
-
-<section class="contact-us">
-    <h2>Contact Us</h2>
-    <p>If you have any questions, feel free to reach out to us:</p>
-    <p>Email: <a href="mailto:msit@university.edu">msit@university.edu</a><br>
-    Phone: (123) 456-7890</p>
-</section>
-
-<footer>
-    <p>&copy; 2024 University Name. All rights reserved.</p>
-</footer>
-</body>
 </html>
