@@ -205,3 +205,23 @@ footer {
 .hex:nth-child(even) {
     transform: translateY(-40px);
 }
+.social-icons a {
+    font-size: 30px;
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #ffd700; /* Change color on hover */
+}
+#video {
+    text-align: center;
+}
+
+#video iframe {
+    display: block;
+    margin: 0 auto;
+}
