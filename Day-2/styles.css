@@ -1,19 +1,29 @@
+/* General Styles */
 body {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-h2 {
-    color: #0044cb;
+h1, h2, h3 {
+    color: #333;
+    margin: 20px 0;
 }
 
-nav {
-    background-color: rgb(7, 7, 7);
+p {
+    color: #555;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
     text-align: center;
+    background-color: rgb(7, 7, 7);
 }
 
 .navbar ul li {
-    list-style-type: none;
-    color: whitesmoke;
     display: inline-block;
     padding: 12px 20px;
 }
@@ -24,7 +34,7 @@ nav ul li a {
 }
 
 nav ul li:hover {
-    background-color: #0044cb
+    background-color: #0044cb;
 }
 
 #curriculum {
@@ -33,6 +43,8 @@ nav ul li:hover {
 
 .curriculum-section {
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .curriculum-item {
@@ -56,25 +68,13 @@ nav ul li:hover {
     margin-bottom: 10px;
 }
 
-.curriculum-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
 .curriculum-item p {
     font-size: 1em;
     color: #333;
 }
 
 .main-content {
-    background-color: #f2f2f2;
-}
-
-.overview-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    background-color: #adadad;
 }
 
 section {
@@ -91,43 +91,53 @@ footer {
     padding: 5px 20px;
 }
 
-.hero-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50vh;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/02/Computer_science_education.png');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
+h1, h2, h3 {
+    color: #333;
+    margin: 20px 0;
 }
 
-.overlay {
+p {
+    color: #555;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    height: 40vh; /* Full height slides */
+}
+
+.slide {
+    display: none;
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    background: rgba(41, 41, 41, 0.9);
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
 }
 
 .hero-content {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
-    text-align: center;
-    z-index: 1;
+    text-align: center; 
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+    padding: 20px;
+    border-radius: 8px;
 }
 
 .hero-content h1 {
-    font-size: 3em;
-    margin-top: 0;
+    font-size: 2.5rem;
+    color: #f2f2f2;
 }
 
 .hero-content p {
     font-size: 1.2em;
+    color: #f2f2f2;
     margin-bottom: 40px;
 }
 
@@ -144,21 +154,43 @@ footer {
 .hero-content .btn:hover {
     background-color: #0056b3;
 }
+
+/* Slideshow fade animation */
+@keyframes fade {
+    from { opacity: 0.4 }
+    to { opacity: 1 }
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+/* Slide Images */
+.slide:nth-child(1) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('image1.jpg');
+}
+
+.slide:nth-child(2) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('image3.jpg');
+}
+
+.slide:nth-child(3) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('image2.jpg');
+}
+
 #overview {
-    max-height: 100%;
-    margin-bottom: 10px;
     padding: 30px;
     background-color: white;
     border-radius: 10px;
     display: flex;
-}
-.overview-container {
-    display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
 }
+
 .container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -175,11 +207,9 @@ footer {
     text-align: center;
     color: #333;
     background: #f0f0f0;
-    margin: 0 1px;
-    position: relative;
+    margin: 10px;
     clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
     transition: background-color 0.3s ease;
-    
 }
 
 .hex:hover {
@@ -188,7 +218,6 @@ footer {
 }
 
 .hex span {
-    position: absolute;
     font-size: 16px;
     font-weight: bold;
     text-align: center;
@@ -196,15 +225,6 @@ footer {
     color: #000;
 }
 
-
-
-.hex:nth-child(odd) {
-    transform: translateY(40px);
-}
-
-.hex:nth-child(even) {
-    transform: translateY(-40px);
-}
 .social-icons a {
     font-size: 30px;
     color: white;
@@ -217,6 +237,7 @@ footer {
     transform: scale(1.2);
     color: #ffd700; /* Change color on hover */
 }
+
 #video {
     text-align: center;
 }
@@ -226,4 +247,62 @@ footer {
     margin: 0 auto;
 }
 
-/* Its of apply.html */
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar ul li {
+        display: block;
+        padding: 10px;
+    }
+
+    .curriculum-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .hex {
+        width: 120px;
+        height: 120px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    #video iframe {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar ul li {
+        padding: 8px;
+    }
+
+    .curriculum-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .hex {
+        width: 100px;
+        height: 100px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    #video iframe {
+        width: 100%;
+        height: auto;
+    }
+}
